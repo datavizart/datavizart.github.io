@@ -6,13 +6,13 @@
   <title>360 Necropolus</title>
 </head>
 <body>
-  <script src="js/three.min.js"></script>
-  <script src="js/panolens.min.js"></script>
+  <script src="three.min.js"></script>
+  <script src="panolens.min.js"></script>
   <script>
 
     var panorama, viewer;
 
-    panorama = new PANOLENS.ImagePanorama( 'image/360_0414_Stitch_XHC.jpg' );
+    panorama = new PANOLENS.ImagePanorama( 'https://datavizart.github.io/work/image/360_0414_Stitch_XHC.jpg' );
 
     viewer = new PANOLENS.Viewer();
     viewer.add( panorama );
