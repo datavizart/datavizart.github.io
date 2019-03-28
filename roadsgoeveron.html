@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Roads Go Ever On</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%}
+        .header {
+            position: absolute;
+            z-index: 10000!important;
+            left: 10px;
+            top:10px;
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id='map'></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoibm92aWNoa292bmV0IiwiYSI6InUzcHpqdlUifQ.JJjGriWWnMPDSyZ-Hd0WgQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/novichkovnet/cipii5tn5004dd2ngoh7j7283',
+            zoom: 2,
+            center: [20, 50],
+            minZoom: [3],
+            maxZoom: [22]
+        });
+        map.addControl(new mapboxgl.Navigation({position: 'top-right'}));
+    </script>
+</body>
+</html>
